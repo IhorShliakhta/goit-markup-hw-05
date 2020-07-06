@@ -45,7 +45,6 @@ a:hover, a:focus {
     font-weight: bold;
     font-style: normal;
     font-size: 26px;
-    line-height: 31px;
     margin-right: 85px;
 }
 
@@ -57,16 +56,55 @@ header {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
     letter-spacing: 0.02em;
-    padding-top: 24px;
-    padding-bottom: 25px;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    line-height: 80px;
+    position: relative;
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #2196F3;
+    border-radius: 2px;
+}
+
+
+.nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #2196F3;
+    border-radius: 2px;
 }
 
 .contacts {
+    display: flex;
+    justify-content: center;
     color: #757575;
     margin-left: auto;
-    justify-content: row;
+    line-height: 80px;
+}
+
+.contacts-link {
+    display: flex;
 }
 
 .contacts li:not(:last-child),
@@ -80,6 +118,7 @@ header {
 }
 
 .contackt-hover:hover {
+    color: #2196F3;
     fill: #2196F3;
 }
 
@@ -98,10 +137,6 @@ header {
     align-items: center;
 }
 
-.conteiner-header ul {
-    display: flex;
-    margin: 0;
-}
 
 .hero-section-1 {
     margin: auto;
@@ -165,7 +200,7 @@ header {
     padding: 0;
 }
 
-.we-do-conteiner ul {
+.we-do-conteiner .we-do-li {
     display: flex;
     margin: 0;
     padding: 0;
@@ -173,8 +208,24 @@ header {
     padding-right: 15px;
 }
 
+
+
 .we-do-item {
     margin-bottom: 92px;
+}
+
+.we-do-point {
+    position: relative;
+}
+
+.we-do-do {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 25px 25px;
+    background: rgba(47, 48, 58, 0.8);
+
 }
 
 .team-conteiner ul {
@@ -247,6 +298,8 @@ header {
     margin-left: 30px;
 }
 
+
+
 .social-link-profile ul li {
     margin: 0;
 }
@@ -305,8 +358,6 @@ h2 {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
-    background-color: var(--color-text);
-    /*бекграунд для подстветки текста*/
 }
 
 .our-team {
@@ -381,6 +432,7 @@ footer, footer a {
 .project a:hover, .project a:focus {
     color: #FFFFFF;
     background: #2196F3;
+    
 }
 
 .project h3 {
@@ -493,15 +545,13 @@ footer, footer a {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.first-card:hover img {
-    width: 370px;
-    height: 294px;
-    background-image: linear-gradient(var(--icon-portfolio), var(--icon-portfolio)), url(/img/first-card.jpg);
-
+.first-card {
+    position: relative;
 }
 
-.first-content {
-    position: relative;
+.card-text {
+    position: absolute;
+    top: 0;
 }
 
 .card-portfolio li:not(img) {
@@ -528,13 +578,13 @@ footer, footer a {
     padding-left: 24px;
     margin-bottom: 20px;
 }
-
+/*
 .conteiner .contacts {
     margin-left: auto;
     display: flex;
     align-items: center;
 }
-
+*/\
 .footer-adress {
     font-style: normal;
     font-size: 14px;
