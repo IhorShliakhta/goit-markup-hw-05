@@ -21,15 +21,15 @@
     </nav>
     <div class="contacts">
       <ul class="contacts-link">
-        <li class="contackt-hover">
-          <a href="mailto:info@devstudio.com" >
+        <li>
+          <a href="mailto:info@devstudio.com" class="contacts-header">
             <svg class="icon-contact">
               <use href="img/sprite.svg#icon-mail"></use>
             </svg>
             info@devstudio.com</a>
         </li>
-        <li class="contackt-hover">
-          <a href="tel:+380961111111">
+        <li>
+          <a href="tel:+380961111111" class="contacts-header" >
             <svg class="icon-contact">
               <use href="img/sprite.svg#icon-phone"></use>
             </svg>
@@ -41,9 +41,9 @@
   </header>
   <main>
     <section class="main-section">
-      <div class="container hero-section-1 hero-section-2"> 
+      <div class="container hero-section-1"> 
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="button-h1">Заказать услугу</button>
+        <button data-modal-open class="button-h1" >Заказать услугу</button>
       </div>
     </section>
     <section class="qualities">  
@@ -329,9 +329,17 @@
         </ul>
       </div>
     </section>
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <div class="modal-content">
+          <h3 class="heder-modal">Оставьте свои данные, мы вам перезвоним</h3>
+        </div>
+        <button data-modal-close class="modal-close"></button>
+      </div>
+    </div>
   </main>
   <footer>
-    <div class="conteiner conte-footer">
+    <div class="conteiner conteiner-footer">
       <div class="position-adress">
         <a href="/" class="logo"><span class="logo-one">Web</span> Studio</a>
         <address class="footer-adress">
@@ -388,5 +396,6 @@
     </div>
     <div class="dev">2020 | Developed by GoIT Students </div>
   </footer>
+  <script src="./js/modal.js"></script>
 </body>
 </html>
